@@ -1,0 +1,39 @@
+#but {
+  background-color: midnightblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 50%;
+}
+
+.button {
+  margin-left: 25%;
+  width: 100%;
+}
+.but:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.dad {
+  border-radius: 25px;
+  display: inline-flex;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#joke {
+  font-size: 40px;
+  width: 50%;
+  display: inline-flex;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. AIzaSyAiWhwHpzGs75Jehfvw2mvPlxGKAD6KGy0
+       Tokyo 35.689487 139.691711 */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      const Lely = { lat: 52.51001, lng: 5.47764 };
+      const Amstelveen = { lat: 52.30569, lng: 4.86251 };
+      const Weesp = { lat: 52.30733, lng: 5.04261 };
+      const Amsterdam = { lat: 52.373169, lng: 4.89066 };
+      const Nijmegen = { lat: 51.84169, lng: 5.85865 };
+      const Hoogeveen = { lat: 52.72612, lng: 6.47958 };
+      const Spijkenisse = { lat: 51.85046, lng: 4.32567 };
+      const Overveen = { lat: 52.391689, lng: 4.6116 };
+      const Mijnsherenland = { lat: 51.79901, lng: 4.4863 };
+      const WincHQ = { lat: 52.37836, lng: 4.85471 };
+      const plaatsen = [
+        Lely,
+        Mijnsherenland,
+        Amstelveen,
+        Weesp,
+        Amsterdam,
+        Nijmegen,
+        Hoogeveen,
+        Spijkenisse,
+        Overveen,
+        WincHQ
+      ];
+
+      function initMap() {
+        // The location of WincHQ
+        let winc = { lat: 52.37836, lng: 4.85471 };
+        let image = {
+          url: "winc-round.png",
+          scaledSize: new google.maps.Size(35, 35)
+        };
+        // The map, centered at WincHQ
+        let map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 8,
+          center: winc
+        });
+        // The marker, positioned at winc
+        let marker = new google.maps.Marker({
+          position: WincHQ,
+          map: map,
+          icon: image
+        });
+        let marker1 = new google.maps.Marker({
+          position: Mijnsherenland,
+          map: map
+        });
+        let marker2 = new google.maps.Marker({ position: Lely, map: map });
+        let marker3 = new google.maps.Marker({
+          position: Amstelveen,
+          map: map
+        });
+        let marker4 = new google.maps.Marker({ position: Weesp, map: map });
+        let marker5 = new google.maps.Marker({ position: Amsterdam, map: map });
+        let marker6 = new google.maps.Marker({ position: Nijmegen, map: map });
+        let marker7 = new google.maps.Marker({ position: Hoogeveen, map: map });
+        let marker8 = new google.maps.Marker({
+          position: Spijkenisse,
+          map: map
+        });
+        let marker9 = new google.maps.Marker({ position: Overveen, map: map });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiWhwHpzGs75Jehfvw2mvPlxGKAD6KGy0&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
